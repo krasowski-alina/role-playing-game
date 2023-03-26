@@ -16,8 +16,21 @@ const monster = {
     image: 'images/orc.png',
     
 }
+function generateDiceRoll(info){
+    let diceArr = []
+    for(let i = 0; i < info; i++){
+        diceArr.push(Math.floor(Math.random()* 6) + 1)
+    }
+    console.log(diceArr)
+}
+generateDiceRoll(hero.diceCount)
+
+
+
+
 function renderCharacters(data){
     const {id, name, health, diceCount, diceRoll, image} = data
+
     const diceHtml = diceRoll.map(dice => {
         return  `<div class="dice">${dice}</div>`
     }).join(' ')
