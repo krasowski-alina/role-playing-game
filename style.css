@@ -89,7 +89,7 @@ main {
     text-align: left;
     margin: 1vh 5%;
     color:#ccc;
-    letter-spacing: 0.03em
+    letter-spacing: 0.03em;
 }
 
 @media(min-width:550px){
