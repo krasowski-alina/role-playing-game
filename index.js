@@ -15,11 +15,10 @@ const monster = {
     
 }
 function generateDiceRoll(diceCount){
-    let diceArr = []
-    for(let i = 0; i < diceCount; i++){
-        diceArr.push(Math.floor(Math.random()* 6) + 1)
-    }
-    return diceArr
+    return new Array(diceCount).fill(0).map(() => {
+        return Math.floor(Math.random()* 6) + 1  
+    })
+
 }
 function getDiceHtml(diceCount){
     return generateDiceRoll(diceCount).map(dice => {
