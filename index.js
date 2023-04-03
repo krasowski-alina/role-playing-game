@@ -1,5 +1,6 @@
 // import Character from '/Character.js'
 import CharacterData from './data.js'
+import { generateDiceRoll } from './utils.js'
 
 function Character(data){
     Object.assign(this, data)
@@ -31,12 +32,7 @@ function render(){
 }
 render()
 
-function generateDiceRoll(diceCount){
-    return new Array(diceCount).fill(0).map(() => {
-        return Math.floor(Math.random()* 6) + 1  
-    })
 
-}
 
 
 
