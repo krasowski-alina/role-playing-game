@@ -16,6 +16,5 @@ const CharacterData = {
         
     }
 }
-console.log(CharacterData)
 
 export default CharacterData
