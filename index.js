@@ -18,9 +18,14 @@ const monster = {
 function Character(data){
     Object.assign(this, data)
     
+    this.getDiceHtml = function(diceCount){
+        return generateDiceRoll(diceCount).map(dice => {
+            return `<div class="dice">${dice}</div>`
+        }).join('')
+    }
     this.getCharacters = function(){
         const {id, name, health, diceCount, image} = this 
-        const diceHtml = getDiceHtml(diceCount)
+        const diceHtml = this.getDiceHtml(diceCount)
     return `<div class="character-card">
                 <h4 class="name"> ${name}</h4>
                 <img class="avatar" src="${image}"/>
@@ -30,22 +35,21 @@ function Character(data){
             </div>`
     }
 }
-const wizard = new Character(hero)
-wizard.getCharacters()
-
-const orc = new Character(monster)
-orc.getCharacters()
+function render(){
+    const wizard = new Character(hero)
+    document.getElementById('hero').innerHTML = wizard.getCharacters()
+    
+    const orc = new Character(monster)
+    document.getElementById('monster').innerHTML = orc.getCharacters()
+    
+}
+render()
 
 function generateDiceRoll(diceCount){
     return new Array(diceCount).fill(0).map(() => {
         return Math.floor(Math.random()* 6) + 1  
     })
 
-}
-function getDiceHtml(diceCount){
-    return generateDiceRoll(diceCount).map(dice => {
-        return `<div class="dice">${dice}</div>`
-    }).join('')
 }
 
 
