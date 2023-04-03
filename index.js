@@ -1,20 +1,6 @@
 // import Character from '/Character.js'
-const hero = {
-    id: "hero",
-    name: 'Wizard',
-    health: 60,
-    diceCount: 3,
-    image: 'images/wizard.png',
-    
-}
-const monster = {
-    id: "monster",
-    name: 'Orc',
-    health: 10,
-    diceCount: 1,
-    image: 'images/orc.png',
-    
-}
+import CharacterData from './data.js'
+
 function Character(data){
     Object.assign(this, data)
     
@@ -36,11 +22,11 @@ function Character(data){
     }
 }
 function render(){
-    const wizard = new Character(hero)
-    document.getElementById('hero').innerHTML = wizard.getCharacters()
+    const wizard = new Character(CharacterData.hero)
+    document.getElementById(wizard.id).innerHTML = wizard.getCharacters()
     
-    const orc = new Character(monster)
-    document.getElementById('monster').innerHTML = orc.getCharacters()
+    const orc = new Character(CharacterData.monster)
+    document.getElementById(orc.id).innerHTML = orc.getCharacters()
     
 }
 render()
