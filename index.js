@@ -1,14 +1,19 @@
 import Character from '/Character.js'
 import CharacterData from './data.js'
 
-function render(){
-    const wizard = new Character(CharacterData.hero)
-    document.getElementById(wizard.id).innerHTML = wizard.getCharacters()
-    
-    const orc = new Character(CharacterData.monster)
-    document.getElementById(orc.id).innerHTML = orc.getCharacters()
-    
+
+document.getElementById('attack-button').addEventListener('click', attack
+)
+function attack(){
+    render()
 }
+function render(){
+    document.getElementById(wizard.id).innerHTML = wizard.getCharacters()
+    document.getElementById(orc.id).innerHTML = orc.getCharacters()  
+}
+
+const wizard = new Character(CharacterData.hero)
+const orc = new Character(CharacterData.monster)
 render()
 
 

@@ -148,13 +148,13 @@ main {
     line-height: 6vh;
 }
 
-@media(min-width:550px){
+/* @media(min-width:550px){
 .dice-container .dice, .dice-container .placeholder-dice{
     height:10vh;
     width:10vh;
     line-height: 10.5vh;
 }
-}
+} */
 
 .dice-container .placeholder-dice{
     background-color: transparent;
