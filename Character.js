@@ -5,15 +5,15 @@ function Character(data){
 
     this.diceArray = getDicePlaceholderHtml(this.diceCount)
 
-    this.getDiceHtml = function(diceCount){
-        return generateDiceRoll(diceCount).map(dice => {
-            return `<div class="dice">${dice}</div>`
+    this.getDiceHtml = function(){
+        this.currentDiceScore = generateDiceRoll(this.diceCount)
+        this.diceArray = this.currentDiceScore.map(num => {
+            return `<div class="dice">${num}</div>`
         }).join('')
     }
-
     this.getCharacters = function(){
-        const {name, health, diceCount, image, diceArray} = this 
-        const diceHtml = this.getDiceHtml(diceCount)
+        const {name, health, image, diceArray} = this 
+
     return `<div class="character-card">
                 <h4 class="name"> ${name}</h4>
                 <img class="avatar" src="${image}"/>

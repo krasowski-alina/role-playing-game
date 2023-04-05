@@ -5,6 +5,8 @@ import CharacterData from './data.js'
 document.getElementById('attack-button').addEventListener('click', attack
 )
 function attack(){
+    wizard.getDiceHtml()
+    orc.getDiceHtml()
     render()
 }
 function render(){
