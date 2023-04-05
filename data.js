@@ -1,6 +1,5 @@
 const CharacterData = {
     hero : {
-        id: "hero",
         name: 'Wizard',
         health: 60,
         diceCount: 3,
@@ -8,7 +7,6 @@ const CharacterData = {
         
     },
     monster : {
-        id: "monster",
         name: 'Orc',
         health: 10,
         diceCount: 1,

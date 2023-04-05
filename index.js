@@ -8,8 +8,8 @@ function attack(){
     render()
 }
 function render(){
-    document.getElementById(wizard.id).innerHTML = wizard.getCharacters()
-    document.getElementById(orc.id).innerHTML = orc.getCharacters()  
+    document.getElementById('hero').innerHTML = wizard.getCharacters()
+    document.getElementById('monster').innerHTML = orc.getCharacters()  
 }
 
 const wizard = new Character(CharacterData.hero)
